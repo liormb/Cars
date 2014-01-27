@@ -30,5 +30,6 @@ class CarsController < ApplicationController
 
 	def destroy # Lior
 		Car.find(params[:id]).destroy
+		redirect_to cars_url
 	end
 end

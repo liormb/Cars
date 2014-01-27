@@ -1,16 +1,25 @@
-<form action="/cars" method ="post">
+<h1>Cars</h1><hr>
 
-<label for="make">Make</label>
-<input id="make" name="make" type="text">
+<form class="form" action="/cars" method ="post">
+	<fieldset>
+		<label for="make">Make</label>
+		<input id="make" name="make" type="text" placeholder="make">
+	</fieldset>
+	<fieldset>
+		<label for="model">Model</label>
+		<input id="model" name="model" type="text" placeholder="model">
+	</fieldset>
+	<fieldset>
+		<label for="year">Year</label>
+		<input id="year" name="year" type="text" placeholder="year">
+	</fieldset>
+	<fieldset>
+		<label for="color">Color</label>
+		<input id="color" name="color" type="text" placeholder="color">
+	</fieldset>
+	<fieldset>
+		<button class="btn btn-primary" type="submit">Submit</putton>
+	</fieldset>
+</form><hr>
 
-<label for="model">Model</label>
-<input id="model" name="model" type="text">
-
-<label for="year">Year</label>
-<input id="year" name="year" type="text">
-
-<label for="color">Color</label>
-<input id="color" name="color" type="text">
-
-<input type="submit">
-</form>
+<%= link_to 'Back', cars_path %>
