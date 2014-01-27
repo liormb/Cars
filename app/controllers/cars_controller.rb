@@ -1,22 +1,22 @@
 class CarsController < ApplicationController
-	def index
+	def index # Lior
 	end
 
-	def new
+	def new # Isaac
 	end
 
-	def edit
+	def edit # Serge
 	end
 
-	def create
+	def create # Isaac
 	end
 
-	def show
+	def show # Serge
 	end
 
-	def update
+	def update # Serge
 	end
 
-	def destroy
+	def destroy # Lior
 	end
 end
