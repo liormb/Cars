@@ -1,5 +1,6 @@
 class CarsController < ApplicationController
 	def index # Lior
+		@cars = Car.all
 	end
 
 	def new # Isaac
@@ -18,5 +19,6 @@ class CarsController < ApplicationController
 	end
 
 	def destroy # Lior
+		Car.find(params[:id]).destroy
 	end
 end

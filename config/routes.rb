@@ -1,6 +1,8 @@
 Cars::Application.routes.draw do
 
   resources :cars
+
+  root to: 'cars#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

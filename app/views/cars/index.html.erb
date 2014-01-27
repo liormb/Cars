@@ -1,0 +1,35 @@
+<h1>Cars</h1><hr>
+
+<% if @cars.count == 0 %>
+	<h1>No Cars in our inventory yet.</h1>
+<% else %>
+	<table class="table">
+		<caption class="caption">Cars Inventory</caption>
+			<thead>
+				<tr>
+					<th>No.</th>
+					<th>Make</th>
+					<th>Model</th>
+					<th>Year</th>
+					<th>Color</th>
+					<th><th class="child" colspan="3">Actions</th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @cars.each_with_index do |car, index| %>
+					<tr>
+						<td><%= index + 1 %></td>
+						<td><%= car.make %></td>
+						<td><%= car.model %></td>
+						<td><%= car.year %></td>
+						<td><%= car.color %></td>
+						<td><%= link_to 'Show', car_path(car) %></td>
+						<td><%= link_to 'Edit', edit_car_path(car) %></td>
+						<td><%= link_to 'Delete', car, method: :delete %></td>
+					</tr>
+				<% end %>
+			</tbody>
+	</table>
+<% end %><hr>
+
+<%= link_to "Create New Car", new_car_path %> 
